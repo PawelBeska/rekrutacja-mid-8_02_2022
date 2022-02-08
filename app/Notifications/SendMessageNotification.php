@@ -45,8 +45,9 @@ class SendMessageNotification extends Notification
         return (new MailMessage)
             ->salutation(__('mail.salutation'))
             ->greeting(__('mail.greeting'))
+            ->subject(__('mail.subject', ['uuid' => $this->message->uuid]))
             ->line(__('mail.content', [
-                    'email' => $this->message->author,
+                    'email' => $this->message->email,
                     'message' => $this->message->content
                 ]
             ));

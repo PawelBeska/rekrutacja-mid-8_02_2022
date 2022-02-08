@@ -1,0 +1,237 @@
+name: Endpoints
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - GET
+    uri: api/v1/product
+    metadata:
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters:
+      per_page:
+        name: per_page
+        description: ''
+        required: false
+        example: 19
+        type: integer
+        custom: []
+    responses:
+      -
+        status: 200
+        content: '{"status":"ok","data":{"data":[],"pagination":{"total":0,"count":0,"per_page":19,"current_page":1,"total_pages":1}},"code":200}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '59'
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: api/v1/product
+    metadata:
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: 'Must be at least 3 characters. Must not be greater than 255 characters.'
+        required: true
+        example: mwjwjkuhhvfcqlqehcwsypbfpswpdxuaforjvtuumkakainlxmfwgzyhnzxphlslpytbaorootbdkglhek
+        type: string
+        custom: []
+      description:
+        name: description
+        description: 'Must be at least 30 characters. Must not be greater than 1000 characters.'
+        required: true
+        example: piyslvbleflnzhopjjssknpjcphjgvtqvbppkzznyokbnouqrtlpzfppjshbogujkliqbmupcyhrgdyqsqqzubztbirdgbpxqiwckggtxuvmuzduxfvulgohitwswqezvjqetgqujuugdjtsaypaxewmteoluaeecefacwsuhigalulsclwxcjnbxwrjccglzodrcymxkrndmtqokjtzdynvazrlycbdqjdytjqrggxpaifwidsiktsartdspqwuseqybfrvhpjfxsavehrxcnlscvzkfkteshgfvtbpqjaigrmcyyd
+        type: string
+        custom: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/v1/product/{id}'
+    metadata:
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the product.'
+        required: true
+        example: 3
+        type: integer
+        custom: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 404
+        content: '{"status":"error","code":"404","message":"Object not found"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '58'
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - PUT
+      - PATCH
+    uri: 'api/v1/product/{id}'
+    metadata:
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the product.'
+        required: true
+        example: 6
+        type: integer
+        custom: []
+    queryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: 'Must be at least 3 characters. Must not be greater than 255 characters.'
+        required: true
+        example: dgypreodvrsnowpqzcshjcnwwneumuvvncdewmzgerudncyznmpppmnksovfsunvyudactpxqvcszftwzpdtsclcukmfmexbzqmpoitsswhyfyzldxvnkhkghnpwarqfhtigogsihabhmgjhjliiuqhgjmzxeh
+        type: string
+        custom: []
+      description:
+        name: description
+        description: 'Must be at least 30 characters. Must not be greater than 1000 characters.'
+        required: true
+        example: rzccbxhvalqyixcwvalppuqhnnhnpyrxdjbixprlivjlwosgcvfqtdyubjonlsrbnjqqhvbslbhvomdkunjcwbvtognbbgrjipiqoueffcvffsspktitpcmhpsyfzaqiazlpvnwiylbfvwchnbnmmezpsqdckhrvrcwzmjcsgznustpgyiqstscctxwqwwitymtdbivosueaaaarqryxsudkmritslcibzpcbzswixabvcmbhuuuubcpjdnhyxjbzuctknvpvuobmthtlcmlebjqqjjllpgzwrbkxhqibaxwhmptvzufpehljliaguhaiinppkmhfhtwfojohdyqbxsmlthlmoomqbtcduithajlvtpnttseihvaaaxvwvwlcnhzyyxvsvgqtxxsabtbbzxfgtfezsrzlibxcpjbwmvjkejzwafzojpmkdfzonhhgmvuaufuzychvklvqehxjirnxipgvibumwcqxuyorukxzeszunwkixtlnjfpybjqxyixvkpfopmxyqhrbkktjhgvupwkjpjvtotvnpkcfoluqmfpqoebccazlrbbpotyjjgfhlbrwtvbwapqhcxjbijhnazsbgyqnbbexoluukdjakdykzfemleskpxrsdnkbpjktbpgvasippsjqsascjxzwpozzkykcpwviimmkxsnzvvtopxlzfrwtewfwleegucipcdyfqbsvpdmiaxnmzniaqazdfbbhsfkxcbvhzxfedznhgtlmjgmqyzbgxltrkjhkmycfgtykbnxnvfztqdkzqzwgdjnnakojcjdrvmgitpqkywlxckybwvozhvlyccpbzqfljjiqzdyqezrpsyjqfh
+        type: string
+        custom: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: api/v1/message
+    metadata:
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters:
+      per_page:
+        name: per_page
+        description: ''
+        required: false
+        example: 8
+        type: integer
+        custom: []
+    responses:
+      -
+        status: 200
+        content: '{"status":"ok","data":{"data":[],"pagination":{"total":0,"count":0,"per_page":8,"current_page":1,"total_pages":1}},"code":200}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '57'
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: api/v1/message
+    metadata:
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters:
+      title:
+        name: title
+        description: 'Must be at least 3 characters. Must not be greater than 255 characters.'
+        required: true
+        example: mrglqmxwtitubeskfuckidzqjjgkkbttwzeuwrwumokzeaxsdpbzemiatctrzairnmufjskdwfxiqszfgikhsnbmfohohmekegsrhqyodrkldrgebyxfyizfdagzqsggchzgqtqoqdkslxjkwoyoctolfoghndxqzofvgqvjmxaokhahhngaqcaebgowdaiujkbhscklaktzuacwjivmekfannnloh
+        type: string
+        custom: []
+      email:
+        name: email
+        description: 'Must be a valid email address. Must be at least 3 characters. Must not be greater than 255 characters.'
+        required: true
+        example: khmpcqjjqiittduqewmphzlblqmyjwxndxpmpzicibbgmrcfhxyeryqgltvedmebaeoffhgzypedazytaugppimyqgtltevijhevyllepxpmyfcbcpk
+        type: string
+        custom: []
+      content:
+        name: content
+        description: 'Must be at least 3 characters. Must not be greater than 500 characters.'
+        required: true
+        example: kshmdirojymlrevmmdwaiqmnmckdwokgpdptbejskmcxjabarxovtxunzphiukqrceymfwbmpplxqzccteugnhewtddooafepotijfankhwtucjolixribxehofltpzucbpuwciwluyifotoicmcgdfphfmygaqdcqogkkzvcjxnbbjpuwzincoccpguvwjenvztdzrzcvxxdsxcrtasweexifmzwqqsaartxtqxtxtfdfrzkhdhyeruebvwsrtnfeqvankeofervdzgnhakcmujlfwrskbfscywfwolrxybrivjkjztwejenfajrlncngqokpqsiuokrdpztkljdbngseophrjhedflszjgxoobnkqbstfxrtrzuvciwpcdzjclomabldkjrmyf
+        type: string
+        custom: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/v1/product/{id}'
+    metadata:
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the product.'
+        required: true
+        example: 1
+        type: integer
+        custom: []
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []

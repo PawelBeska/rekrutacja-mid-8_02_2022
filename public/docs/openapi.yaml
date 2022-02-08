@@ -1,0 +1,348 @@
+openapi: 3.0.3
+info:
+  title: Laravel
+  description: ''
+  version: 1.0.0
+servers:
+  -
+    url: 'http://localhost'
+paths:
+  /api/v1/product:
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: ok
+                  data:
+                    data: []
+                    pagination:
+                      total: 0
+                      count: 0
+                      per_page: 19
+                      current_page: 1
+                      total_pages: 1
+                  code: 200
+                properties:
+                  status:
+                    type: string
+                    example: ok
+                  data:
+                    type: object
+                    example:
+                      data: []
+                      pagination:
+                        total: 0
+                        count: 0
+                        per_page: 19
+                        current_page: 1
+                        total_pages: 1
+                  code:
+                    type: integer
+                    example: 200
+      tags:
+        - Endpoints
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                per_page:
+                  type: integer
+                  description: ''
+                  example: 19
+      security: []
+    post:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 'Must be at least 3 characters. Must not be greater than 255 characters.'
+                  example: mwjwjkuhhvfcqlqehcwsypbfpswpdxuaforjvtuumkakainlxmfwgzyhnzxphlslpytbaorootbdkglhek
+                description:
+                  type: string
+                  description: 'Must be at least 30 characters. Must not be greater than 1000 characters.'
+                  example: piyslvbleflnzhopjjssknpjcphjgvtqvbppkzznyokbnouqrtlpzfppjshbogujkliqbmupcyhrgdyqsqqzubztbirdgbpxqiwckggtxuvmuzduxfvulgohitwswqezvjqetgqujuugdjtsaypaxewmteoluaeecefacwsuhigalulsclwxcjnbxwrjccglzodrcymxkrndmtqokjtzdynvazrlycbdqjdytjqrggxpaifwidsiktsartdspqwuseqybfrvhpjfxsavehrxcnlscvzkfkteshgfvtbpqjaigrmcyyd
+              required:
+                - name
+                - description
+      security: []
+  '/api/v1/product/{id}':
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        404:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: error
+                  code: '404'
+                  message: 'Object not found'
+                properties:
+                  status:
+                    type: string
+                    example: error
+                  code:
+                    type: string
+                    example: '404'
+                  message:
+                    type: string
+                    example: 'Object not found'
+      tags:
+        - Endpoints
+      security: []
+    put:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 'Must be at least 3 characters. Must not be greater than 255 characters.'
+                  example: dgypreodvrsnowpqzcshjcnwwneumuvvncdewmzgerudncyznmpppmnksovfsunvyudactpxqvcszftwzpdtsclcukmfmexbzqmpoitsswhyfyzldxvnkhkghnpwarqfhtigogsihabhmgjhjliiuqhgjmzxeh
+                description:
+                  type: string
+                  description: 'Must be at least 30 characters. Must not be greater than 1000 characters.'
+                  example: rzccbxhvalqyixcwvalppuqhnnhnpyrxdjbixprlivjlwosgcvfqtdyubjonlsrbnjqqhvbslbhvomdkunjcwbvtognbbgrjipiqoueffcvffsspktitpcmhpsyfzaqiazlpvnwiylbfvwchnbnmmezpsqdckhrvrcwzmjcsgznustpgyiqstscctxwqwwitymtdbivosueaaaarqryxsudkmritslcibzpcbzswixabvcmbhuuuubcpjdnhyxjbzuctknvpvuobmthtlcmlebjqqjjllpgzwrbkxhqibaxwhmptvzufpehljliaguhaiinppkmhfhtwfojohdyqbxsmlthlmoomqbtcduithajlvtpnttseihvaaaxvwvwlcnhzyyxvsvgqtxxsabtbbzxfgtfezsrzlibxcpjbwmvjkejzwafzojpmkdfzonhhgmvuaufuzychvklvqehxjirnxipgvibumwcqxuyorukxzeszunwkixtlnjfpybjqxyixvkpfopmxyqhrbkktjhgvupwkjpjvtotvnpkcfoluqmfpqoebccazlrbbpotyjjgfhlbrwtvbwapqhcxjbijhnazsbgyqnbbexoluukdjakdykzfemleskpxrsdnkbpjktbpgvasippsjqsascjxzwpozzkykcpwviimmkxsnzvvtopxlzfrwtewfwleegucipcdyfqbsvpdmiaxnmzniaqazdfbbhsfkxcbvhzxfedznhgtlmjgmqyzbgxltrkjhkmycfgtykbnxnvfztqdkzqzwgdjnnakojcjdrvmgitpqkywlxckybwvozhvlyccpbzqfljjiqzdyqezrpsyjqfh
+              required:
+                - name
+                - description
+      security: []
+    delete:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the product.'
+        example: 3
+        required: true
+        schema:
+          type: integer
+  /api/v1/message:
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: ok
+                  data:
+                    data: []
+                    pagination:
+                      total: 0
+                      count: 0
+                      per_page: 8
+                      current_page: 1
+                      total_pages: 1
+                  code: 200
+                properties:
+                  status:
+                    type: string
+                    example: ok
+                  data:
+                    type: object
+                    example:
+                      data: []
+                      pagination:
+                        total: 0
+                        count: 0
+                        per_page: 8
+                        current_page: 1
+                        total_pages: 1
+                  code:
+                    type: integer
+                    example: 200
+      tags:
+        - Endpoints
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                per_page:
+                  type: integer
+                  description: ''
+                  example: 8
+      security: []
+    post:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  description: 'Must be at least 3 characters. Must not be greater than 255 characters.'
+                  example: mrglqmxwtitubeskfuckidzqjjgkkbttwzeuwrwumokzeaxsdpbzemiatctrzairnmufjskdwfxiqszfgikhsnbmfohohmekegsrhqyodrkldrgebyxfyizfdagzqsggchzgqtqoqdkslxjkwoyoctolfoghndxqzofvgqvjmxaokhahhngaqcaebgowdaiujkbhscklaktzuacwjivmekfannnloh
+                email:
+                  type: string
+                  description: 'Must be a valid email address. Must be at least 3 characters. Must not be greater than 255 characters.'
+                  example: khmpcqjjqiittduqewmphzlblqmyjwxndxpmpzicibbgmrcfhxyeryqgltvedmebaeoffhgzypedazytaugppimyqgtltevijhevyllepxpmyfcbcpk
+                content:
+                  type: string
+                  description: 'Must be at least 3 characters. Must not be greater than 500 characters.'
+                  example: kshmdirojymlrevmmdwaiqmnmckdwokgpdptbejskmcxjabarxovtxunzphiukqrceymfwbmpplxqzccteugnhewtddooafepotijfankhwtucjolixribxehofltpzucbpuwciwluyifotoicmcgdfphfmygaqdcqogkkzvcjxnbbjpuwzincoccpguvwjenvztdzrzcvxxdsxcrtasweexifmzwqqsaartxtqxtxtfdfrzkhdhyeruebvwsrtnfeqvankeofervdzgnhakcmujlfwrskbfscywfwolrxybrivjkjztwejenfajrlncngqokpqsiuokrdpztkljdbngseophrjhedflszjgxoobnkqbstfxrtrzuvciwpcdzjclomabldkjrmyf
+              required:
+                - title
+                - email
+                - content
+      security: []
+tags:
+  -
+    name: Endpoints
+    description: ''

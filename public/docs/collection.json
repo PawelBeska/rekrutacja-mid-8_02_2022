@@ -1,0 +1,347 @@
+{
+    "variable": [
+        {
+            "id": "baseUrl",
+            "key": "baseUrl",
+            "type": "string",
+            "name": "string",
+            "value": "http:\/\/localhost"
+        }
+    ],
+    "info": {
+        "name": "Laravel",
+        "_postman_id": "7b388909-b38d-46f4-b127-97b057ac55a0",
+        "description": "",
+        "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
+    },
+    "item": [
+        {
+            "name": "Endpoints",
+            "description": "",
+            "item": [
+                {
+                    "name": "api\/v1\/product",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/product",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/product"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"per_page\":19}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "59"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"status\":\"ok\",\"data\":{\"data\":[],\"pagination\":{\"total\":0,\"count\":0,\"per_page\":19,\"current_page\":1,\"total_pages\":1}},\"code\":200}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "api\/v1\/product",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/product",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/product"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"name\":\"mwjwjkuhhvfcqlqehcwsypbfpswpdxuaforjvtuumkakainlxmfwgzyhnzxphlslpytbaorootbdkglhek\",\"description\":\"piyslvbleflnzhopjjssknpjcphjgvtqvbppkzznyokbnouqrtlpzfppjshbogujkliqbmupcyhrgdyqsqqzubztbirdgbpxqiwckggtxuvmuzduxfvulgohitwswqezvjqetgqujuugdjtsaypaxewmteoluaeecefacwsuhigalulsclwxcjnbxwrjccglzodrcymxkrndmtqokjtzdynvazrlycbdqjdytjqrggxpaifwidsiktsartdspqwuseqybfrvhpjfxsavehrxcnlscvzkfkteshgfvtbpqjaigrmcyyd\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "api\/v1\/product\/{id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/product\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/product\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "3",
+                                    "description": "The ID of the product."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "58"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 404,
+                            "body": "{\"status\":\"error\",\"code\":\"404\",\"message\":\"Object not found\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "api\/v1\/product\/{id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/product\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/product\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "6",
+                                    "description": "The ID of the product."
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"name\":\"dgypreodvrsnowpqzcshjcnwwneumuvvncdewmzgerudncyznmpppmnksovfsunvyudactpxqvcszftwzpdtsclcukmfmexbzqmpoitsswhyfyzldxvnkhkghnpwarqfhtigogsihabhmgjhjliiuqhgjmzxeh\",\"description\":\"rzccbxhvalqyixcwvalppuqhnnhnpyrxdjbixprlivjlwosgcvfqtdyubjonlsrbnjqqhvbslbhvomdkunjcwbvtognbbgrjipiqoueffcvffsspktitpcmhpsyfzaqiazlpvnwiylbfvwchnbnmmezpsqdckhrvrcwzmjcsgznustpgyiqstscctxwqwwitymtdbivosueaaaarqryxsudkmritslcibzpcbzswixabvcmbhuuuubcpjdnhyxjbzuctknvpvuobmthtlcmlebjqqjjllpgzwrbkxhqibaxwhmptvzufpehljliaguhaiinppkmhfhtwfojohdyqbxsmlthlmoomqbtcduithajlvtpnttseihvaaaxvwvwlcnhzyyxvsvgqtxxsabtbbzxfgtfezsrzlibxcpjbwmvjkejzwafzojpmkdfzonhhgmvuaufuzychvklvqehxjirnxipgvibumwcqxuyorukxzeszunwkixtlnjfpybjqxyixvkpfopmxyqhrbkktjhgvupwkjpjvtotvnpkcfoluqmfpqoebccazlrbbpotyjjgfhlbrwtvbwapqhcxjbijhnazsbgyqnbbexoluukdjakdykzfemleskpxrsdnkbpjktbpgvasippsjqsascjxzwpozzkykcpwviimmkxsnzvvtopxlzfrwtewfwleegucipcdyfqbsvpdmiaxnmzniaqazdfbbhsfkxcbvhzxfedznhgtlmjgmqyzbgxltrkjhkmycfgtykbnxnvfztqdkzqzwgdjnnakojcjdrvmgitpqkywlxckybwvozhvlyccpbzqfljjiqzdyqezrpsyjqfh\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "api\/v1\/message",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/message",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/message"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"per_page\":8}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "57"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"status\":\"ok\",\"data\":{\"data\":[],\"pagination\":{\"total\":0,\"count\":0,\"per_page\":8,\"current_page\":1,\"total_pages\":1}},\"code\":200}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "api\/v1\/message",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/message",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/message"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"title\":\"mrglqmxwtitubeskfuckidzqjjgkkbttwzeuwrwumokzeaxsdpbzemiatctrzairnmufjskdwfxiqszfgikhsnbmfohohmekegsrhqyodrkldrgebyxfyizfdagzqsggchzgqtqoqdkslxjkwoyoctolfoghndxqzofvgqvjmxaokhahhngaqcaebgowdaiujkbhscklaktzuacwjivmekfannnloh\",\"email\":\"khmpcqjjqiittduqewmphzlblqmyjwxndxpmpzicibbgmrcfhxyeryqgltvedmebaeoffhgzypedazytaugppimyqgtltevijhevyllepxpmyfcbcpk\",\"content\":\"kshmdirojymlrevmmdwaiqmnmckdwokgpdptbejskmcxjabarxovtxunzphiukqrceymfwbmpplxqzccteugnhewtddooafepotijfankhwtucjolixribxehofltpzucbpuwciwluyifotoicmcgdfphfmygaqdcqogkkzvcjxnbbjpuwzincoccpguvwjenvztdzrzcvxxdsxcrtasweexifmzwqqsaartxtqxtxtfdfrzkhdhyeruebvwsrtnfeqvankeofervdzgnhakcmujlfwrskbfscywfwolrxybrivjkjztwejenfajrlncngqokpqsiuokrdpztkljdbngseophrjhedflszjgxoobnkqbstfxrtrzuvciwpcdzjclomabldkjrmyf\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "api\/v1\/product\/{id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/product\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/product\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the product."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        }
+    ],
+    "auth": {
+        "type": "noauth"
+    }
+}

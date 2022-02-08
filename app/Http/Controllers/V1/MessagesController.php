@@ -4,10 +4,9 @@ namespace App\Http\Controllers\V1;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreMessageRequest;
-use App\Http\Resources\ProductCollection;
+use App\Http\Resources\MessageCollection;
 use App\Jobs\SendMessageJob;
 use App\Models\Message;
-use App\Models\Product;
 use App\Services\MessageService;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
@@ -33,8 +32,8 @@ class MessagesController extends Controller
         ]);
 
         return $this->successResponse(
-            new ProductCollection(
-                Product::paginate(Arr::get($data, 'per_page', 15))
+            new MessageCollection(
+                Message::paginate(Arr::get($data, 'per_page', 15))
             )
         );
     }
@@ -51,13 +50,14 @@ class MessagesController extends Controller
         try {
             $message = $messageService->assignData([
                 'title' => $data['title'],
-                'author' => $data['author'],
+                'email' => $data['email'],
                 'content' => $data['content'],
             ])->getMessage();
 
             SendMessageJob::dispatch($message);
             return $this->successResponse('ok', ResponseAlias::HTTP_CREATED);
         } catch (\Exception $e) {
+            dd($e);
             $this->reportError($e);
             return $this->errorResponse(
                 __('message.Something went wrong'),

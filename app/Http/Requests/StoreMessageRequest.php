@@ -25,7 +25,7 @@ class StoreMessageRequest extends FormRequest
     {
         return [
             'title' => ['required', 'string', 'min:3', 'max:255'],
-            'author' => ['required', 'string', 'email', 'min:3', 'max:255'],
+            'email' => ['required', 'string', 'email', 'min:3', 'max:255'],
             'content' => ['required', 'string', 'min:3', 'max:500'],
         ];
     }

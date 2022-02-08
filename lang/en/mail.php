@@ -16,5 +16,6 @@ return [
     'greeting' => 'Have a nice day!',
     'salutation' => "Your help is needed.",
     'content' => "User with email address :email send message :message",
+    'subject'=>"New message :uuid"
 
 ];

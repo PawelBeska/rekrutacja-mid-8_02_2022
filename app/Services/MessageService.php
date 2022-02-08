@@ -31,7 +31,7 @@ class MessageService
     public function assignData(array $data): static
     {
         $this->message->title = $data['title'];
-        $this->message->author = $data['author'];
+        $this->message->email = $data['email'];
         $this->message->content = $data['content'];
         $this->message->save();
         return $this;

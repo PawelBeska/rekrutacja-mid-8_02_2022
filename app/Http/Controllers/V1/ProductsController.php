@@ -102,7 +102,7 @@ class ProductsController extends Controller
      * @param \App\Models\Product $product
      * @return \Illuminate\Http\JsonResponse
      */
-    public function delete(Product $product): JsonResponse
+    public function destroy(Product $product): JsonResponse
     {
         try {
             $product->delete();

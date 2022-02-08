@@ -13,9 +13,9 @@ return new class extends Migration {
     public function up()
     {
         Schema::create('messages', function (Blueprint $table) {
-            $table->id();
+            $table->uuid();
             $table->string('title')->nullable(false);
-            $table->string('author')->nullable(false);
+            $table->string('email')->nullable(false);
             $table->text('content')->nullable(false);
             $table->timestamps();
         });

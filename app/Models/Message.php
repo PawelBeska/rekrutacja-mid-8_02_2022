@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Http\Traits\HasUuidPrimaryKey;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
@@ -13,6 +14,10 @@ use Illuminate\Notifications\Notifiable;
  */
 class Message extends Model
 {
-    use HasFactory, Notifiable;
+    use HasFactory, Notifiable, HasUuidPrimaryKey;
+
+    protected $primaryKey = 'uuid';
+
+
 
 }
