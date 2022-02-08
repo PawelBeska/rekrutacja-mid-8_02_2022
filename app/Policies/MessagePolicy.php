@@ -2,11 +2,11 @@
 
 namespace App\Policies;
 
-use App\Models\Product;
+use App\Models\Message;
 use App\Models\User;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
-class ProductPolicy
+class MessagePolicy
 {
     use HandlesAuthorization;
 
@@ -25,10 +25,10 @@ class ProductPolicy
      * Determine whether the user can view the model.
      *
      * @param \App\Models\User|null $user
-     * @param \App\Models\Product $product
+     * @param \App\Models\Message $message
      * @return bool
      */
-    public function view(?User $user, Product $product): bool
+    public function view(?User $user, Message $message): bool
     {
         return true;
     }
@@ -48,10 +48,10 @@ class ProductPolicy
      * Determine whether the user can update the model.
      *
      * @param \App\Models\User|null $user
-     * @param \App\Models\Product $product
+     * @param \App\Models\Message $message
      * @return bool
      */
-    public function update(?User $user, Product $product): bool
+    public function update(?User $user, Message $message): bool
     {
         return true;
     }
@@ -60,10 +60,10 @@ class ProductPolicy
      * Determine whether the user can delete the model.
      *
      * @param \App\Models\User|null $user
-     * @param \App\Models\Product $product
+     * @param \App\Models\Message $message
      * @return bool
      */
-    public function delete(?User $user, Product $product): bool
+    public function delete(?User $user, Message $message): bool
     {
         return true;
     }
