@@ -2,6 +2,10 @@
 
 ### Stanowisko PHP Mid Developer
 
+### Firma:
+
+Globe Group Software House
+
 ### Data rozpoczęcia:
 
 8.02.2020
