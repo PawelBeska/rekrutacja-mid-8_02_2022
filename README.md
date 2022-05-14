@@ -10,6 +10,10 @@
 
 8.02.2020
 
+### Wynik rekrutacji:
+
+Pozytywny (Przebita oferta)
+
 ### Instalacja
 
 Zmiana nazwy pliku z .env.example do .env
